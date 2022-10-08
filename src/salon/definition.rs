@@ -12,7 +12,7 @@ pub struct Cloison {
 
 pub fn dessiner<'a> () -> (Result<SVGBackend<'a>, Box<dyn std::error::Error>>, Vec<Cloison>) {
     // Create a 800*600 bitmap and start drawing
-    let mut backend = SVGBackend::new("tests/svg/test3.svg", (15000, 15000));
+    let mut backend = SVGBackend::new("tests/svg/salon.svg", (15000, 15000));
 
     let mut cloisons_a_dessiner = Vec::new();
     cloisons_a_dessiner.push(Cloison{
