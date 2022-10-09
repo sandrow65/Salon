@@ -8,6 +8,7 @@ pub struct Carreau {
     pub position: Cell<BackendCoord>,
     pub taille: i32,
     pub quantite: Cell<i32>,
+    pub epaisseur_joint: i32,
 }
 
 impl Carreau {
