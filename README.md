@@ -43,6 +43,11 @@ dessin_salon
 │   ├── main.rs
 ```
 
+## Aperçu
+
+![image](https://user-images.githubusercontent.com/60396239/194763765-159e38b0-aee5-4b66-b11a-c391ce6dfd9b.png)
+
+
 ## Plus tard
 * Faire en sorte de donner toutes les dimensions des aires libres non carrelées pour faciliter la découpe
 * Permettre à l'utilisateur de donner la taille du carrelage et des joints
