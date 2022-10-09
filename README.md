@@ -28,7 +28,7 @@
   + ```plotters-svg = "0.3```
   + ```plotters-backend = "0.3```
 
-## A savoir
+## À savoir
 * Le carrelage débute en bas à droite de la pièce
 * Arbre de la librarie (sans les dépendances) :
 ```bash
