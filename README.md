@@ -10,16 +10,23 @@
 
 ## Description de la solution
 * On créé un module nommé *salon* consitué de 2 sous-modules :
-  - *definition* dans lequel on définit une structure ***Cloison*** (nom, côté haut-gauche, côté bas-droit, couleur) et une fonction ***dessiner*** qui dessine la pièce en créant la liste de cloisons correspondantes
+  - *definition* dans lequel on définit une structure ***Cloison*** (nom, côté haut-gauche, côté bas-droit, couleur) et ***ZoneACouvrir*** (backend de dessin et liste de cloisons) qui implémente 2 fonctions : 
+    + ***dessiner*** qui dessine la pièce en fonction de la liste des cloisons
+    + ***couvrir*** qui remplit la pièce de carreaux sans les couper et les ajoute au dessin principal, ligne par ligne, en colorant les surfaces non carrelées et affiche les distances "libres"
   - *materiau* dans lequel on définit une structure ***Carreau*** (position initiale du premier carreau, position courante, taille, quantité) et une fonction ***croise_cloison*** qui à partir d'une liste de cloisons dit si un carreau croise une cloison à la position où il est actuellement
-* On crée une structure principale ***ZoneACouvrir*** dans le module *salon* :
-  - Définie par le backend du dessin de la pièce *(et plus tard par la liste des cloisons définissant la pièce)*
-  - A laquelle on implémente une fonction ***couvrir*** qui remplit la pièce de carreaux sans les couper et les ajoute au dessin principal, ligne par ligne, en colorant les surfaces non carrelées et affiche les distances "libres"
-* Dans la fonction ***main*** (appelée par la commande `cargo run`) il ne reste plus qu'à donner une position initiale, dessiner la pièce et couvrir la zone de carreaux => à la fin on récupère la quantité de carreaux restante !
-* Le résultat s'enregistre dans un dossier ***test > svg> salon.svg*** (dossiers créés automatiquement si non-existants)
+* On crée une structure principale  dans le module *salon* :
+  - A laquelle on implémente une fonction ***initialiser*** qui crée la liste de cloisons, puis crée et dessine la zone
+* Dans la fonction ***main*** (appelée par la commande `cargo run`) il ne reste plus qu'à donner une position initiale, initialiser la pièce et couvrir la zone de carreaux => à la fin on récupère la quantité de carreaux restante !
+* Le résultat s'enregistre dans un dossier ***test > svg> nom.svg*** (où ***nom*** est saisi par l'utilisateur)
 
 ## Pré-requis
-* Installer **RUST** et **cargo** <img src="https://w7.pngwing.com/pngs/114/914/png-transparent-rust-programming-language-logo-machine-learning-haskell-crab-animals-cartoon-crab.png" width="50">
+<img src="https://w7.pngwing.com/pngs/114/914/png-transparent-rust-programming-language-logo-machine-learning-haskell-crab-animals-cartoon-crab.png" width="50">
+
+* Installer ```RUST``` 
+* Dépendances :
+  + ```plotters = "0.3.1```
+  + ```plotters-svg = "0.3```
+  + ```plotters-backend = "0.3```
 
 ## A savoir
 * Le carrelage débute en bas à droite de la pièce
@@ -37,8 +44,6 @@ dessin_salon
 ```
 
 ## Plus tard
-* Revoir la fonction ***dessiner*** pour que la liste de cloisons soit en paramètre au lieu d'être définie dans la fonction
 * Faire en sorte de donner toutes les dimensions des aires libres non carrelées pour faciliter la découpe
-* Permettre à l'utilisateur de choisir un nom de fichier (voire un chemin de destination, mais pas une extension !)
 * Permettre à l'utilisateur de donner la taille du carrelage et des joints
 * Permettre à l'utilisateur de définir ses cloisons
