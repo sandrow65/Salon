@@ -15,14 +15,26 @@
 * On crée une structure principale ***ZoneACouvrir*** dans le module *salon* :
   - Définie par le backend du dessin de la pièce *(et plus tard par la liste des cloisons définissant la pièce)*
   - A laquelle on implémente une fonction ***couvrir*** qui remplit la pièce de carreaux sans les couper et les ajoute au dessin principal, ligne par ligne, en colorant les surfaces non carrelées et affiche les distances "libres"
-* Dans la fonction ***main*** (appelée par la commande *cargo run* il ne reste plus qu'à donner une position initiale, dessiner la pièce et couvrir la zone de carreaux => ç la fin on récupère la quantité de carreaux restante !
+* Dans la fonction ***main*** (appelée par la commande `cargo run`) il ne reste plus qu'à donner une position initiale, dessiner la pièce et couvrir la zone de carreaux => à la fin on récupère la quantité de carreaux restante !
 * Le résultat s'enregistre dans un dossier ***test > svg> salon.svg*** (dossiers créés automatiquement si non-existants)
 
 ## Pré-requis
-* Installer **RUST** et **cargo**
+* Installer **RUST** et **cargo** <img src="https://w7.pngwing.com/pngs/114/914/png-transparent-rust-programming-language-logo-machine-learning-haskell-crab-animals-cartoon-crab.png" width="50">
 
 ## A savoir
 * Le carrelage débute en bas à droite de la pièce
+* Arbre de la librarie (sans les dépendances) :
+```bash
+dessin_salon 
+├── Cargo.toml
+├── src
+│   ├── salon
+│   │   ├── definition.rs
+│   │   ├── materiau.rs
+│   ├── salon.rs
+│   ├── lib.rs
+│   ├── main.rs
+```
 
 ## Plus tard
 * Revoir la fonction ***dessiner*** pour que la liste de cloisons soit en paramètre au lieu d'être définie dans la fonction
