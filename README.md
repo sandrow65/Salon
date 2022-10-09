@@ -24,9 +24,9 @@
 
 * Installer ```RUST``` 
 * Dépendances :
-  + ```plotters = "0.3.1```
-  + ```plotters-svg = "0.3```
-  + ```plotters-backend = "0.3```
+  + ```plotters = "0.3.1"```
+  + ```plotters-svg = "0.3"```
+  + ```plotters-backend = "0.3"```
 
 ## À savoir
 * Le carrelage débute en bas à droite de la pièce
