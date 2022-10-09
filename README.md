@@ -31,16 +31,19 @@
 ## À savoir
 * Le carrelage débute en bas à droite de la pièce
 * Arbre de la librarie (sans les dépendances) :
-```bash
-dessin_salon 
+```
+dessin_salon
+├── Cargo.lock
 ├── Cargo.toml
-├── src
-│   ├── salon
-│   │   ├── definition.rs
-│   │   ├── materiau.rs
-│   ├── salon.rs
-│   ├── lib.rs
-│   ├── main.rs
+├── README.md
+├── target
+└── src
+    ├── lib.rs
+    ├── main.rs
+    ├── salon
+    │   ├── definition.rs
+    │   └── materiau.rs
+    └── salon.rs
 ```
 
 ## Aperçu
